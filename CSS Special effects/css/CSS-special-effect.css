@@ -21,7 +21,7 @@ html {
     box-shadow: inset 10px 10px 5px #4ce980; 
 }
 .both-shadows {
-    box-shadow: 10px 10px 5px #000000, inset 10px 10px 5px #4ce980;
+    box-shadow: 10px 10px 5px #000000, inset 10px 10px 5px #4ce980, -10px -10px 5px #e24a4a, inset -10px -10px 5px rgba(164, 50, 168, 0.50);
 }
 .code-line {
     color: #776f00;
