@@ -1,0 +1,29 @@
+html {
+    background-color: #d19e9e;
+}
+.box {    
+    padding: 5px;
+    border: 1px solid #000000;
+    width: 600px;
+    background-color: #ffffff;
+    margin:0 0 30px 30px;
+}
+.bottom-right-shadow {
+    box-shadow: 10px 10px 5px #000000;
+}
+.top-left-shadow {
+    box-shadow: -10px -10px 5px #e24a4a;
+}
+.bottom-right-shadow-transparancy {
+    box-shadow: 10px 10px 5px rgba(164, 50, 168, 0.50);
+}
+.bottom-right-shadow-inside {
+    box-shadow: inset 10px 10px 5px #4ce980; 
+}
+.both-shadows {
+    box-shadow: 10px 10px 5px #000000, inset 10px 10px 5px #4ce980;
+}
+.code-line {
+    color: #776f00;
+    background-color: #ecff81;
+}
