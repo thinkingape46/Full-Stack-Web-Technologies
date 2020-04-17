@@ -1,0 +1,30 @@
+html {
+    background-color: #d19e9e;
+    font-size: 125%;
+}
+p {
+    margin: 0;
+    padding: 0 0 50px 0;
+}
+.box { 
+    width: fit-content;  
+    padding: 20px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    margin:0 0 30px 30px;
+    text-align: center;
+}
+.box-a {
+    transform: rotate(5deg);
+}
+.box-b {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+}
+.box-c {
+    transform: skewx(15deg) scale(0.5) rotate(10Deg) translateX(-800px) translateY(-300px);
+    transform-origin: 100% 0;
+}
+.box-d {
+    transform: scale(0.5);
+    transform-origin: 100% 100%;
