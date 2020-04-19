@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Slideshow</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/image-slideshow.css">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/cycle2.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <h1>Image Slideshow using JavaScipt</h1>
+        </header>
+        <content>
+
+            <div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-pause-on-hover="true">
+                <span class="cycle-prev">&laquo;</span>
+                <span class="cycle-next">&raquo;</span>
+                <span class="cycle-pager"></span>
+                <div class="slide">                    
+                    <img src="../images/image1.jpg" alt="picture of a trail">
+                    <div class="slide-text">
+                        <h1>Image 1</h1>
+                        <p>Caption 1, text supposed to be a bit longer <a href="#" class="button-1">Call to action!</a></p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../images/image2.jpg" alt="picture of a trail">
+                    <div class="slide-text">
+                        <h1>Image 2</h1>
+                        <p>Caption 2, text supposed to be a bit longer <a href="#" class="button-1">Call to action!</a></p>
+                    </div>
+                </div>
+            </div>          
+        </content>
+        <footer>
+            <p>End of the page</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+html {
+    background-color: #008080;
+}
+body {
+    width: 940px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+.slide {
+    position: relative;
+    width: 100%;
+}
+.slide-text {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+}
+.cycle-prev {
+    position: absolute;
+    bottom: 50%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 300%;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+}
+.cycle-next {
+    position: absolute;
+    bottom: 50%;
+    right: 0%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 300%;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+}
+.cycle-slideshow:hover .cycle-prev, .cycle-slideshow:hover .cycle-next, .cycle-slideshow:hover .slide-text, .cycle-slideshow:hover .cycle-pager span {
+        opacity: 1;
+        transition-duration: 2s;
+}
+.cycle-pager {
+    position: absolute;
+    top: 10px;
+    z-index: 10003;
+    width: 100%;
+    text-align: center;
+    font-size: 300%;
+}
+.cycle-pager span {
+    text-indent: -9999px;
+    display: inline-block;
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0 4px;
+    cursor: pointer;
+}
+.cycle-pager .cycle-pager-active {
+    background-color: #000000;
+}
+.button-a {
+    padding: 6px 10px;
+    border-radius:  5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #365267;
+    color: #ffffff;
+    font-size: 84%;
+    margin-left: 10px;
+}
+.button-1 {
+    padding: 6px 10px;
+    border-radius:  5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #365267;
+    color: #ffffff;
+    font-size: 84%;
+    margin-left: 10px;
+}
+.button-1:hover {
+    background-color: #ffffff;
+    color: #365267;
+    transition-duration: 1.5s;    
+}
+@media screen and (max-width: 768px) {
+    .slide-text {
+        position: static;
+        background-color: #000000;
+    }
+}
