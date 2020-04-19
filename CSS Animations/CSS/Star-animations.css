@@ -1,0 +1,24 @@
+html {
+    background-color: #008080;
+}
+body {
+    width: 940px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+@keyframes starspin {
+    50% {
+        transform: translateX(150%) rotate(0) scale(.5);
+    }
+    75% {
+        transform: translateX(150%) rotate(180deg) scale(0.5);
+    }
+    100% {
+        transform: translateX(300%) rotate(180deg) scale(1);
+    }
+    }
+.star {
+    animation: starspin 2s infinite alternate forwards;
+    width: 25%;
+    height: auto;
+}
