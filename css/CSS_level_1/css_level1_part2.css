@@ -1,0 +1,21 @@
+/* Body styling */
+body {
+    background-image: url(https://gamepedia.cursecdn.com/outerwilds_gamepedia/a/a9/Postcredit_image.jpg?version=ad45c4fbfe07a31ca6dd4fa3372969f4);
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+}
+
+/* DIV stylong */
+div {
+    background-color: #FFFFFF;
+    color: teal;
+    border: steelblue solid 2px;
+    width: 1000px;
+}
+
+/*SPAN styling */
+span {
+    background-color: turquoise;
+    color: #000000;
+    border: #000000 solid 1px;
+}
