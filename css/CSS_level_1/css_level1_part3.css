@@ -1,0 +1,52 @@
+body {
+    background: url(https://gamepedia.cursecdn.com/outerwilds_gamepedia/a/a9/Postcredit_image.jpg?version=ad45c4fbfe07a31ca6dd4fa3372969f4);
+    background-repeat: no-repeat;
+}
+
+h3 {
+    color: cyan;
+}
+
+p {
+    color: #ffffff;
+}
+
+.div1 p {
+    color: rgb(230, 106, 106);
+    font-weight: bold;
+    border: 1px solid #000000;
+    width: 50%;
+    background-color: #ffffff;
+}
+
+.div2 p {
+    color: rgba(5, 117, 5, 0.8);
+    border: 1px solid #000000;
+    width: 50%;
+    background-color: #ffa7a7;
+}
+
+#singledout {
+    color: rgb(1, 10, 255);
+    border: 1px solid #ffe5e5;
+    width: 50%;
+    background-color: #ffa7a7;
+}
+
+li {
+    color: #ffffff;
+}
+
+h3 + ul {
+    border: 1px black solid;
+    width: 50%;
+    background-color: grey;
+}
+
+li a {
+    color: rgb(122, 192, 9);
+}
+
+li a[href="https://en.wikipedia.org/wiki/Main_Page"] {
+    color: rgb(0, 255, 0);
+}
