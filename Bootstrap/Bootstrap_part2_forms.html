@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Bootstrap Forms</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <form class="">
+                
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="emailaddress" placeholder="Enter email" required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never shrare your email with anyone else.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="pass">Password</label>
+                    <input type="password" class="form-control" id="pass" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="someselect">Example select</label>
+                    <select id="someselect" class="form-control" name="option">
+        
+                        <option id="1" value="1">1</option>
+                        <option id="2" value="2">2</option>
+                        <option id="3" value="3">3</option>
+                        <option id="4" value="4">4</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    </select>
+        
+                    <label for="somemultiselect">Example multiple select</label>
+                    <select multiple id="somemultiselect" class="form-control" name="mulselect">
+        
+                        <option id="1" value="1">1</option>
+                        <option id="2" value="2">2</option>
+                        <option id="3" value="3">3</option>
+                        <option id="4" value="4">4</option>                
+        
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="txtarea">Example textarea</label>
+                    <textarea id="txtarea" class="form-control" name="textarea1" rows="3"></textarea>                                       
+                </div>
+
+                <div class="form-group">
+                    <label for="upload">File input</label><br>
+                    <input type="file" id="upload" name="file">               
+                    <small class="form-text text-muted">Example block-level help text here.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="radio">Radio buttons</label>
+                    <div class="radio">                
+                        <label><input type="radio" id="rad1" name="radbtn" value="one"> Option one is this and that—be sure to include why it's great</label>                        
+                    </div>
+
+                    <div class="radio">
+                        <label><input type="radio" id="rad2" name="radbtn" value="two"> Option one is this and that—be sure to include why it's great</label>
+                    </div>
+            
+                    <div class="radio">
+                        <label><input type="radio" id="rad3" name="radbtn" value="three"> Option one is this and that—be sure to include why it's great</label>                        
+                    </div>
+                </div>
+
+                <div class="checkbox">        
+                    <label><input type="checkbox" id="check" name="check" value="yes"> Check me out</label>                    
+                </div>
+        
+                <button type="submit" class="btn btn-default">Submit</button>
+
+            </form>
+
+        </div>
+
+    </body>
+
+</html>
