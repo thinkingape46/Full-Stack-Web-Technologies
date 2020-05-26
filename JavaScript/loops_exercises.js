@@ -5,17 +5,17 @@
 
 // Using while loop:
 
-// var i = 1
-// while (i < 6) {
-//     console.log("hello")
-//     i += 1
-// }
+var i = 1
+while (i < 6) {
+    console.log("hello")
+    i += 1
+}
 
 // Using For loop:
 
-// for (i = 1; i < 6; i += 1) {
-//     console.log("hello")
-// }
+for (i = 1; i < 6; i += 1) {
+    console.log("hello")
+}
 
 
 // -----------------------------------------------------------------------------------------------
@@ -30,20 +30,20 @@
 // METHOD ONE
 // While Loop
 
-// x = 1
-// while (x < 26) {
-//     if (x % 2 != 0) {
-//         console.log(`${x} is an odd number`)        
-//     }
-// x += 1
-// }
+var x = 1
+while (x < 26) {
+    if (x % 2 != 0) {
+        console.log(`${x} is an odd number`)        
+    }
+x += 1
+}
 
 
 // METHOD TWO
 // For Loop
 
-// for (num = 1; num < 26; num += 1) {
-//     if (num % 2 != 0) {
-//         console.log(`${num} is an odd number`)
-//     }
-// }
+for (var num = 1; num < 26; num += 1) {
+    if (num % 2 != 0) {
+        console.log(`${num} is an odd number`)
+    }
+}
