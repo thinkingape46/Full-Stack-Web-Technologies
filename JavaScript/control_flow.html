@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Learning Control Flow in Javascript</title>
+        <title>Learning Control Flow and Loops in Javascript</title>
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
         <script src="control_flow.js"></script>
         <style>
@@ -14,10 +14,18 @@
             }
             h2 {
                 text-align: center;
+                color: red;
+            }
+            h3 {
+                color: rgb(221, 64, 64);
+            }
+            .row p {
+                width: 50%;
+                float: left;
             }
         </style>
     </head>
-    <body onload="script();">
+    <body>
 
         <h2>Control Flow in JavaScript</h2>
         <p>Control flow is identical to other programming languages except for the syntax.</p>
@@ -30,7 +38,25 @@
         
         <h3>IF ELSE statement syntax</h3>
         <p>if (condition) {<br>&nbsp;&nbsp;//Execute some Code<br>} else if (condition two) {<br>&nbsp;&nbsp;//Execute some other code<br>} else {<br>&nbsp;&nbsp;// Execture some backup Code<br>}</p>
-        
+
+        <h2>While Loop</h2>
+
+        <h3>WHILE loop statement syntax</h3>
+        <p>while (condition) {<br>&nbsp;&nbsp;// Execute some Code while<br>&nbsp;&nbsp;//this condition is true<br>}</p>
+
+        <h2>For Loop</h2>
+
+        <h3>FOR loop statement syntax</h3>
+        <div class="row">
+            <p>for (statement1; statement2; statement3) {<br>&nbsp;&nbsp;// Execute some Code<br>}</p>
+            <p><strong>Statement1</strong> is executed before the loop (the code block starts)<br>
+                <strong>Statement2</strong> defines the condition for running the loop.<br>
+                <strong>Statement3</strong> is executed each time after the loop cycles through once.<br><br>
+                for (var i = 0; i < 5; statement3) {
+                    <br>&nbsp;&nbsp;// Execute some Code<br>
+                }
+            </p>
+        </div>
     </body>
 
 
