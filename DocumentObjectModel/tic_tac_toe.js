@@ -34,159 +34,140 @@ var cellThree = document.querySelector("#cell3")
 
 
 // Seven
-function XOrO7() {
+
+cellSeven.addEventListener("click", function() {
     if (cellSeven.textContent == "") {
-        return "X"
+        cellSeven.textContent = "X";
     }
     else if (cellSeven.textContent == "X") {
-        return "O"
+        cellSeven.textContent = "O"
     }
     else {
-        return ""
+        cellSeven.textContent = "";
     }
-}
-cellSeven.addEventListener("click", function() {
-    cellSeven.textContent = XOrO7()
 })
 
 // Eight
-function XOrO8() {
+
+cellEight.addEventListener("click", function() {
     if (cellEight.textContent == "") {
-        return "X"
+        cellEight.textContent = "X";
     }
     else if (cellEight.textContent == "X") {
-        return "O"
+        cellEight.textContent = "O"
     }
     else {
-        return ""
+        cellEight.textContent = "";
     }
-}
-cellEight.addEventListener("click", function() {
-    cellEight.textContent = XOrO8()
 })
 
 // Nine
-function XOrO9() {
+
+cellNine.addEventListener("click", function() {
     if (cellNine.textContent == "") {
-        return "X"
+        cellNine.textContent = "X";
     }
     else if (cellNine.textContent == "X") {
-        return "O"
+        cellNine.textContent = "O"
     }
     else {
-        return ""
+        cellNine.textContent = "";
     }
-}
-cellNine.addEventListener("click", function() {
-    cellNine.textContent = XOrO9()
 })
 
 // Four
-function XOrO4() {
+
+cellFour.addEventListener("click", function() {
     if (cellFour.textContent == "") {
-        return "X"
+        cellFour.textContent = "X";
     }
     else if (cellFour.textContent == "X") {
-        return "O"
+        cellFour.textContent = "O"
     }
     else {
-        return ""
+        cellFour.textContent = "";
     }
-}
-cellFour.addEventListener("click", function() {
-    cellFour.textContent = XOrO4()
 })
 
 // Five
-function XOrO5() {
+
+cellFive.addEventListener("click", function() {
     if (cellFive.textContent == "") {
-        return "X"
+        cellFive.textContent = "X";
     }
     else if (cellFive.textContent == "X") {
-        return "O"
+        cellFive.textContent = "O"
     }
     else {
-        return ""
+        cellFive.textContent = "";
     }
-}
-cellFive.addEventListener("click", function() {
-    cellFive.textContent = XOrO5()
 })
 
 // Six
-function XOrO6() {
+
+cellSix.addEventListener("click", function() {
     if (cellSix.textContent == "") {
-        return "X"
+        cellSix.textContent = "X";
     }
     else if (cellSix.textContent == "X") {
-        return "O"
+        cellSix.textContent = "O"
     }
     else {
-        return ""
+        cellSix.textContent = "";
     }
-}
-cellSix.addEventListener("click", function() {
-    cellSix.textContent = XOrO6()
 })
 
 // One
-function XOrO1() {
+
+cellOne.addEventListener("click", function() {
     if (cellOne.textContent == "") {
-        return "X"
+        cellOne.textContent = "X";
     }
     else if (cellOne.textContent == "X") {
-        return "O"
+        cellOne.textContent = "O"
     }
     else {
-        return ""
+        cellOne.textContent = "";
     }
-}
-cellOne.addEventListener("click", function() {
-    cellOne.textContent = XOrO1()
 })
 
 // Two
-function XOrO2() {
+
+cellTwo.addEventListener("click", function() {
     if (cellTwo.textContent == "") {
-        return "X"
+        cellTwo.textContent = "X";
     }
     else if (cellTwo.textContent == "X") {
-        return "O"
+        cellTwo.textContent = "O"
     }
     else {
-        return ""
+        cellTwo.textContent = "";
     }
-}
-cellTwo.addEventListener("click", function() {
-    cellTwo.textContent = XOrO2()
 })
 
 // Three
-function XOrO3() {
+
+cellThree.addEventListener("click", function() {
     if (cellThree.textContent == "") {
-        return "X"
+        cellThree.textContent = "X";
     }
     else if (cellThree.textContent == "X") {
-        return "O"
+        cellThree.textContent = "O"
     }
     else {
-        return ""
+        cellThree.textContent = "";
     }
-}
-cellThree.addEventListener("click", function() {
-    cellThree.textContent = XOrO3()
 })
+
+var square = document.querySelectorAll("td");
 
 var restart = document.querySelector("#button")
+var square = document.querySelectorAll("td");
 
-restart.addEventListener("click", function() {
-    cellSeven.textContent = ""
-    cellEight.textContent = ""
-    cellNine.textContent = ""
-    cellFour.textContent = ""
-    cellFive.textContent = ""
-    cellSix.textContent = ""
-    cellOne.textContent = ""
-    cellTwo.textContent = ""
-    cellThree.textContent = ""
-})
+function clearAll() {
+    for (i = 0; i < 10; i++) {
+        square[i].textContent = "";
+    }
+}
+
+restart.addEventListener("click", clearAll)

@@ -10,7 +10,7 @@ body {
     margin: auto;
     margin-top: 50px;
     background-color: #ededed;
-    padding: 60px 40px;
+    padding: 30px 20px;
     border-radius: 5px;
 }
 
@@ -38,14 +38,24 @@ body {
     margin-right: 20px;
 }
 
+#button {
+    padding: 20px 40px;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
 #button:hover, #button_one:hover, #button_two:hover {
     background-color: #00b339;
+}
+
+#button:active, #button_one:active, #button_two:active  {
+    background-color: #52ff89;
 }
 
 .table {
     margin: auto;
     border-spacing: 0px;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     margin-top: 50px;
 }
 
@@ -53,8 +63,8 @@ td {
     background-color: #b5b1b1;
     font-weight: bolder;
     font-size: 4.0em;
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     text-align: center;
     box-sizing: border-box;
     border: 2px solid #000000;
