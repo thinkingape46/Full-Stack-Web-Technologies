@@ -16,53 +16,66 @@
 // Declare the winner and ask if they want to restart.  (Update the text on the page.)
 
 
-var playGameQ = prompt("Do you like to play the game (y or n)? ")
-console.log(playGameQ)
+// var playGameQ = prompt("Do you like to play the game (y or n)? ")
+// console.log(playGameQ)
 
 
-// Button reaction to playGameQ
-if (playGameQ == "y") {
-    $("#buttonOne").css("background-color", "#00b339")
-    $("#buttonOne").text("Yes")
-    var playerNames = askName()
-    console.log(playerNames)
+// // Button reaction to playGameQ
+// if (playGameQ == "y") {
+//     $("#buttonOne").css("background-color", "#00b339")
+//     $("#buttonOne").text("Yes")
+//     var playerNames = askName()
+//     console.log(playerNames)
 
-    var tossResult = toss()
-    console.log(`toss result: ${tossResult}`)
+//     var tossResult = toss()
+//     console.log(`toss result: ${tossResult}`)
+//     var playerOne = playerNames[tossResult[0]]
+//     var playerTwo = playerNames[tossResult[1]]       
+//     console.log(`Toss Winner: ${playerOne}, Toss Loser: ${playerTwo}`)
 
-    var playerOne = playerNames[tossResult[0]]
-    var playerTwo = playerNames[tossResult[1]]
-    
-    console.log(`Toss Winner: ${playerOne}, Toss Loser: ${playerTwo}`)
+//     AskChipChoice()    
+//     console.log(`${playerOne} colour is ${playerColor[0]}, ${playerTwo} color is ${playerColor[1]}`)
 
-    playerOneColor = prompt(`${playerOne}, choose your disc color (r or y): `)
-    console.log(playerOneColor)
-}
+//     playGame()
 
-if (playGameQ == "n") {
-    $("#buttonOne").css("background-color", "#ff0000")
-    $("#buttonOne").text("No")
-}
+// }
 
-// Toss to decide who's going to select the color of the disk first
+// if (playGameQ == "n") {
+//     $("#buttonOne").css("background-color", "#ff0000")
+//     $("#buttonOne").text("No")
+// }
 
-function toss() {
-    var TossWin = Math.floor(Math.random())
-    if (TossWin === 1) {
-        otherSideOfCoin = 0;
-    }
-    else {
-        otherSideOfCoin = 1;
-    }
-    return [TossWin, otherSideOfCoin]
-}
+// // Toss to decide who's going to select the color of the disk first
 
-function askName() {
-    var pOneName = prompt("Player1, please enter your name: ");
-    var pTwoName = prompt("Player2, please enter your name: ");
-    return [pOneName, pTwoName]
-}
+// function toss() {
+//     var TossWin = Math.floor(Math.random() * 2)
+//     if (TossWin === 1) {
+//         otherSideOfCoin = 0;
+//     }
+//     else {
+//         otherSideOfCoin = 1;
+//     }
+//     return [TossWin, otherSideOfCoin]
+// }
 
-function AskChipChoice() {
+// function askName() {
+//     var pOneName = prompt("Player1, please enter your name: ");
+//     var pTwoName = prompt("Player2, please enter your name: ");
+//     return [pOneName, pTwoName]
+// }
 
-}
+// function AskChipChoice() {
+
+//     playerColor = ["", ""]
+//     playerColor[0] = prompt(`${playerOne}, choose your disc color (r or y): `)
+
+//     if (playerColor[0] === "r") {
+//         playerColor[1] = "y"
+//     }
+//     else { playerColor[1] = "r"}
+
+//     return playerColor
+// }
+
+// function playGame() {
+
