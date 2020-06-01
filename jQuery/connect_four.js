@@ -83,7 +83,7 @@
 
 
 clicks = [1, 1]
-$("td").click(function() {
+$("tr").eq(0).click(function() {
     clicks.push(1);
     console.log(clicks)
 })
@@ -105,134 +105,196 @@ var o = 5
 
 $(".colOne").eq(0).click(function() {
 
-    if ((clicks.length) % 2 == 0) {
-        color = "green"
-    }
-    else {
-        color = "red"
-    }    
-    
-    $(".colOne").eq(i).css("background-color", color);
-    console.log(i)
-
-    i = i - 1
-    console.log(i)
-    
+        if (i >= 0) {
+            if ((clicks.length) % 2 == 0) {
+                color = "green"
+            }
+            else {
+                color = "red"
+            }    
+            
+            $(".colOne").eq(i).css("background-color", color);
+            console.log(i)
+        
+            i = i - 1
+            console.log(i)
+        }
+        else {
+            alert(columnFull())
+        }
     }
 )
 
 $(".colTwo").eq(0).click(function() {
+
+    if (j >= 0) {
+        if ((clicks.length) % 2 == 0) {
+            color = "green"
+        }
+        else {
+            color = "red"
+        }
     
-    if ((clicks.length) % 2 == 0) {
-        color = "green"
+        $(".colTwo").eq(j).css("background-color", color);
+        console.log(i)
+    
+        j = j - 1
+        console.log(i)
     }
     else {
-        color = "red"
-    }
-
-    $(".colTwo").eq(j).css("background-color", color);
-    console.log(i)
-
-    j = j - 1
-    console.log(i)
-    
+        alert(columnFull())
+    }    
     }
 )
 
 $(".colThree").eq(0).click(function() {
+
+    if (k >= 0) {
+        if ((clicks.length) % 2 == 0) {
+            color = "green"
+        }
+        else {
+            color = "red"
+        }
     
-    if ((clicks.length) % 2 == 0) {
-        color = "green"
+        $(".colThree").eq(k).css("background-color", color);
+        console.log(i)
+    
+        k = k - 1
+        console.log(i)
     }
     else {
-        color = "red"
-    }
-
-    $(".colThree").eq(k).css("background-color", color);
-    console.log(i)
-
-    k = k - 1
-    console.log(i)
-    
+        alert(columnFull())
+    }  
     }
 )
 
 $(".colFour").eq(0).click(function() {
+
+    if (l >= 0) {
+        if ((clicks.length) % 2 == 0) {
+            color = "green"
+        }
+        else {
+            color = "red"
+        }
     
-    if ((clicks.length) % 2 == 0) {
-        color = "green"
+        $(".colFour").eq(l).css("background-color", color);
+        console.log(i)
+    
+        l = l - 1
+        console.log(i)
     }
     else {
-        color = "red"
-    }
-
-    $(".colFour").eq(l).css("background-color", color);
-    console.log(i)
-
-    l = l - 1
-    console.log(i)
-    
+        alert(columnFull())
+    }   
     }
 )
 
 
 $(".colFive").eq(0).click(function() {
+
+    if (m >= 0) {
+        if ((clicks.length) % 2 == 0) {
+            color = "green"
+        }
+        else {
+            color = "red"
+        }
     
-    if ((clicks.length) % 2 == 0) {
-        color = "green"
+        $(".colFive").eq(m).css("background-color", color);
+        console.log(i)
+    
+        m = m - 1
+        console.log(i)
     }
     else {
-        color = "red"
+        alert(columnFull())
     }
-
-    $(".colFive").eq(m).css("background-color", color);
-    console.log(i)
-
-    m = m - 1
-    console.log(i)
-    
     }
 )
 
 $(".colSix").eq(0).click(function() {
+
+    if (n >= 0) {
+        if ((clicks.length) % 2 == 0) {
+            color = "green"
+        }
+        else {
+            color = "red"
+        }
     
-    if ((clicks.length) % 2 == 0) {
-        color = "green"
+        $(".colSix").eq(n).css("background-color", color);
+        console.log(i)
+    
+        n = n - 1
+        console.log(i)
     }
     else {
-        color = "red"
-    }
-
-    $(".colSix").eq(n).css("background-color", color);
-    console.log(i)
-
-    n = n - 1
-    console.log(i)
-    
+        alert(columnFull())
+    }    
     }
 )
 
 $(".colSeven").eq(0).click(function() {
+
+    if (o >= 0) {
+        if ((clicks.length) % 2 == 0) {
+            color = "green"
+        }
+        else {
+            color = "red"
+        }
     
-    if ((clicks.length) % 2 == 0) {
-        color = "green"
+        $(".colSeven").eq(o).css("background-color", color);
+        console.log(i)
+    
+        o = o - 1
+        console.log(i)
     }
     else {
-        color = "red"
-    }
-
-    $(".colSeven").eq(o).css("background-color", color);
-    console.log(i)
-
-    o = o - 1
-    console.log(i)
-    
+        alert(columnFull())
+    }    
     }
 )
 
+function columnFull() {
+    clicks.pop()
+    return "column is full, please choose another"    
+}
 
+cellValue = ""
+function winCheck() {
+    cellValue = ""
+    var value = ""
+    for (q = 0; q < 6; q++) {
+        if ($(".colOne").eq(q).css("background-color") === "rgb(0, 128, 0)") {
+            value = "g"
+        }
+        else if ($(".colOne").eq(q).css("background-color") === "rgb(255, 0, 0)") {
+            value = "r"
+        }
+        cellValue = cellValue + value
+    }
+    // for (strPos = 0; strPos < cellValue.length + 1; strPos++) {
+    //     if(cellValue[strPos] === cellValue[strPos + 1] && cellValue[strPos] === cellValue[strPos + 2] && cellValue[strPos] === cellValue[strPos + 3] && cellValue[strPos] != undefined) {
+    //         return "Someone won!"
+    //     }
+    //     else {console.log("No wins!")}        
+    // }
+    for (pos = 0; pos < 42; pos++) {
+        if ($("td").eq(pos).css("background-color") === $("td").eq(pos + 1).css("background-color") && 
+        $("td").eq(pos).css("background-color") === $("td").eq(pos + 2).css("background-color") && 
+        $("td").eq(pos).css("background-color") === $("td").eq(pos + 3).css("background-color") &&
+        $("td").eq(pos).css("background-color") != "rgb(255, 255, 255)")
+            return "Someone Won!"
+        else {
+            console.log("No Wins!")
+        }
+    }
 
-
+console.log(cellValue)  
+}
 
 
 
@@ -327,5 +389,5 @@ $(".colSeven").eq(0).click(function() {
 // //     }
 // //     else if ($("td").eq(0).css("background-color") === "rgb(255, 255, 255)") {
 // //         $("td").eq(0).css("background-color", "rgb(153, 0, 0)")
-// //     }
-// // })
+//     }
+// })
