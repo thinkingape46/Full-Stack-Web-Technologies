@@ -16,7 +16,6 @@
 // Declare the winner and ask if they want to restart.  (Update the text on the page.)
 
 
-
 var playGameQ = prompt("Do you like to play the game (y or n)? ")
 console.log(playGameQ)
 
@@ -80,17 +79,31 @@ function AskChipChoice() {
 }
 
 function playOneTurnFunc() {
+    console.log("1 turn")
 
     $(".updates").text(`${playerOne}, you turn to drop the chip`)
 
-    $(".rowOne").eq(0).click(playTwoTurnFunc())
+    $(".rowOne").click(function() {
+        if ($("#buttonThree").text() === "Won") {
+            $(".updates").text(`${playerOne}, You won`)
+        }
+        else {playTwoTurnFunc()}        
+    }
+    )
 }
 
 function playTwoTurnFunc() {
+    console.log("2 turn")
 
     $(".updates").text(`${playerTwo}, you turn to drop the chip`)
 
-    $(".rowOne").eq(0).click(playOneTurnFunc())
+    $(".rowOne").click(function() {
+        if ($("#buttonThree").text() === "Won") {
+            $(".updates").text(`${playerTwo}, You won`)
+        }
+        else {playOneTurnFunc()}        
+    }
+    )
 
 }
 
@@ -282,7 +295,8 @@ function winCheck() {
                 $("td").eq(row + 1).css("border-color", "rgb(0, 255, 0)")
                 $("td").eq(row + 2).css("border-color", "rgb(0, 255, 0)")
                 $("td").eq(row + 3).css("border-color", "rgb(0, 255, 0)")
-                return "win"
+                $("#buttonThree").text("Won")
+                $("#buttonThree").css("background-color", "rgb(0, 245, 90)")
             }
         }
     }
@@ -301,7 +315,8 @@ function winCheck() {
                 $("td").eq(col + 7).css("border-color", "rgb(0, 255, 0)")
                 $("td").eq(col + 14).css("border-color", "rgb(0, 255, 0)")
                 $("td").eq(col + 21).css("border-color", "rgb(0, 255, 0)")
-                return "win"
+                $("#buttonThree").text("Won")
+                $("#buttonThree").css("background-color", "rgb(0, 245, 90)")
             }            
         }
     }
@@ -322,7 +337,8 @@ function winCheck() {
                 $("td").eq(cr + 6).css("border-color", "rgb(0, 255, 0)")
                 $("td").eq(cr + 12).css("border-color", "rgb(0, 255, 0)")
                 $("td").eq(cr + 18).css("border-color", "rgb(0, 255, 0)")
-                return "win"
+                $("#buttonThree").text("Won")
+                $("#buttonThree").css("background-color", "rgb(0, 245, 90)")
             }
         }
     }
@@ -341,7 +357,8 @@ function winCheck() {
                 $("td").eq(cr + 6).css("border-color", "rgb(0, 255, 0)")
                 $("td").eq(cr + 12).css("border-color", "rgb(0, 255, 0)")
                 $("td").eq(cr + 18).css("border-color", "rgb(0, 255, 0)")
-                return "win"
+                $("#buttonThree").text("Won")
+                $("#buttonThree").css("background-color", "rgb(0, 245, 90)")
             }
         }
     }
@@ -362,7 +379,8 @@ for (td = 3; td > -1; td--) {
             $("td").eq(cr + 8).css("border-color", "rgb(0, 255, 0)")
             $("td").eq(cr + 16).css("border-color", "rgb(0, 255, 0)")
             $("td").eq(cr + 24).css("border-color", "rgb(0, 255, 0)")
-            return "win"
+            $("#buttonThree").text("Won")
+            $("#buttonThree").css("background-color", "rgb(0, 245, 90)")
         }
     }
 }
@@ -381,7 +399,8 @@ for (td = 7; td < 15; td = td + 7) {
             $("td").eq(cr + 8).css("border-color", "rgb(0, 255, 0)")
             $("td").eq(cr + 16).css("border-color", "rgb(0, 255, 0)")
             $("td").eq(cr + 24).css("border-color", "rgb(0, 255, 0)")
-            return "win"
+            $("#buttonThree").text("Won")
+            $("#buttonThree").css("background-color", "rgb(0, 245, 90)")
         }
     }
 }

@@ -37,20 +37,21 @@ td {
     width: 50px;
 }
 
-#buttonOne {
-    background-color: #e09128;
-    padding: 10px 20px;
+
+.bottom_dashboard button {
+    width: 30%;
+}
+
+button {
+    padding: 5px 10px;
     border-radius: 3px;
     border: none;
-    color: #ffffff;
-    font-weight: bold;
-    margin-right: 20px;
 }
 
 #buttonOne {
-    padding: 5px 10px;
-    box-sizing: border-box;
-    font-size: 10px;
+    background-color: #e09128;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 #buttonOne:hover{
