@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Connect Four</title>
         <link rel="stylesheet" href="connect_four.css">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Architects+Daughter&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -12,8 +12,11 @@
             <h1>Welcome to Connect Four</h1>
         </div>
 
-        <div class="container">
-            <p class="updates">hello</p>
+        <div class="container playerDashboard">
+
+            <p id="pOne">Player1 loading....</p>
+            <p id="pTwo">Player2 loading....</p>
+            <p class="updates">Loading...</p>
         </div>
 
         <div class="board container">
@@ -76,15 +79,14 @@
                     <td class="colFive"></td>
                     <td class="colSix"></td>
                     <td class="colSeven"></td>
-                </tr>
-                
+                </tr>                
             </table>
         </div>
-        <br><br><br>
+        <br>
         <div class="container bottom_dashboard">
 
-            <button id="buttonOne">Play?</button>
-            <button id="buttonTwo">Who won the Toss?</button>
+            <button id="buttonOne">Play?</button><br>
+            <button id="buttonTwo">Who won the Toss?</button><br>
             <button id="buttonThree">Status</button>
 
         </div>
