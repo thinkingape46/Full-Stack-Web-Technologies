@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Jinja Template Control Flow</title>
+    </head>
+    <body>
+        <h1>Below is the rendered list</h1>
+        <h2>This page is generated using {{framework | capitalize}} framework</h2>
+
+        {% if user_logged %}
+        <p>Welcome back!</p>
+        {% else %}
+        <p>Please Log in</p>
+        {% endif %}
+
+        <ol>
+            {% for item in list_a %}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ol>
+
+        {% if "Hydrogen" in list_a %}
+        <p>Hydrogen is the lightest gas in the periodic table.</p>
+        {% endif %}
+
+        {% if "Helium" in list_a %}
+        <p>Helium is an inert gas.</p>
+        {% endif %}
+
+        {% if "Lithium" in list_a %}
+        <p>Lithium is a metal used in batteries.</p>
+
+        {% else %}
+        <p>Just leave it blank</p>
+        {% endif %}
+    </body>
+</html>
