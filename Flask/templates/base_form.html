@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Flask Template Forms</title>
+    </head>
+    <body>
+        <h2>This form is created using Flask Framework</h2>
+        <a href="{{url_for('index')}}">Home Page</a>
+        {% block content %}
+        {% endblock %}
+
+        <footer>
+            <p style="text-align: center;">Flask Framework</p>
+        </footer>
+    </body>
+</html>

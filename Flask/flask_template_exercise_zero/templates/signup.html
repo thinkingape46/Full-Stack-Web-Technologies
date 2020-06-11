@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{{ url_for('thankyou')}}">
+    <ul>
+        <li>Must have an upper case somewhere</li>
+        <li>Must have an lowe case somewhere</li>
+        <li>Mush have a number at the end</li>
+    </ul>
+    <div style="margin-top: 10px;">
+
+        <label for=username>Username</label>
+        <input id="username" type="text" placeholder="username here" name="un">
+        
+        <input type="submit">
+
+    </div>
+
+</form>
+
+{% endblock %}

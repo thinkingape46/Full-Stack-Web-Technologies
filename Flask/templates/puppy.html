@@ -2,6 +2,10 @@
 
 {% block content%}
 
-<h2>This is the page for puppy {{name}}</h2>
+<h2>This is the page for puppy {{name | capitalize}}.</h2>
+
+<a href="{{ url_for('index') }}">Go to Home Page</a>
+<br>
+<a href="{{url_for('static', filename='image2.jpg')}}">Click Here</a>
 
 {% endblock %}

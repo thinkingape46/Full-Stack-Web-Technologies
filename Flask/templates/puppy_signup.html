@@ -1,0 +1,20 @@
+{% extends 'base_form.html'%}
+
+{% block content %}
+
+<h2>Sign up for Puppy Band!</h2>
+
+<form action="{{url_for('thank_you')}}">
+    <div style="margin-bottom: 10px;">
+        <label for="fn">First Name</label>
+        <input type="text" id="fn" placeholder="First Name Here" name="fn"><br>
+    </div>
+    <div style="margin-bottom: 10px;">
+        <label for="ln">Last Name</label>
+        <input type="text" id="ln" placeholder="Last Name Here" name="ln">
+    </div>
+    <input type="submit">
+
+</form>
+
+{% endblock %}
