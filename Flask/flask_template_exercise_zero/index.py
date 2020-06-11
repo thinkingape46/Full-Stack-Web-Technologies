@@ -8,6 +8,7 @@ def index():
 
 @app.route('/thankyou')
 def thankyou():
+    
     user_name = request.args.get('un')
 
     if user_name.islower():
@@ -25,7 +26,7 @@ def thankyou():
     else:
         int_check = 'fail'
 
-    return render_template('username_check.html', l_check=is_lower, u_check=is_upper, is_int=int_check, un=user_name)
+    return render_template('thankyou.html', l_check=is_lower, u_check=is_upper, is_int=int_check, un=user_name)
 
 if __name__ == '__main__':
     app.run(debug=True)

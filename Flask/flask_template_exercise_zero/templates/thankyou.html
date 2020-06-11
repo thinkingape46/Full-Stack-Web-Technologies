@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+    {% if l_check == 'fail' %}
+    <li>Must have an upper case somewhere</li>
+    {% endif %}
+
+    {% if u_check == 'fail' %}
+    <li>Must have an lowe case somewhere</li>
+    {% endif %}
+
+    {% if is_int == 'fail' %}
+    <li>Mush have a number at the end</li>
+    {% endif %}
+</ul>
+
+
+{% if l_check == u_check == is_int == 'pass' %}
+<p>Thank you {{un}}!</p>
+{% endif %}
+
+{% endblock %}
