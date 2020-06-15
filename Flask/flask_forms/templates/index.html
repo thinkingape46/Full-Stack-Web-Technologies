@@ -1,0 +1,28 @@
+<p>
+
+<!-- Start of if block -->
+{% if breed %}
+ <!-- This will be rendered on breed when breed is entered.  -->
+The breed you entered is {{breed}}
+Update in the form below:
+
+<!-- esle block -->
+{% else %}
+Please enter you breed:
+
+<!-- End of if block -->
+{% endif %}
+
+<form method="POST">
+
+    <!-- For CSRF security feature -->
+    <!-- hidden_tag is method inherited from the FlaskForm -->
+    {{ form.hidden_tag() }}
+    <!-- .label is the string passed into StringField, it creates a label in the HTML page -->
+    <!-- form.breed() cread the box in HTML page. -->
+    {{ form.breed.label }} {{ form.breed()}}
+    {{ form.submit() }}
+
+</form>
+
+</p>
