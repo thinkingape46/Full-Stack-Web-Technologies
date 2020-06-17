@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 # step 1: Setup SQLite database
 # basedir gives the path of the file i.e basic.py
-# abspath is the absolute path.
+# abspath is the absolute path (the path we see in windows explorer)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 # Step 2: Create a flask application.
