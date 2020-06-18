@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Adoption Site!</title>
+</head>
+<body>
+    <h2>Puppy Adoption Site:</h2>
+    <p>What Do you like to do?</p>
+    <ul>
+        <li><a href="{{ url_for('index')}}">Home</a></li>
+        <li><a href="{{ url_for('add_puppy')}}">Add Pup</a></li>
+        <li><a href="{{ url_for('del_puppy')}}">Remove Puppy</a></li>
+        <li><a href="{{ url_for('list_puppy')}}">Show List</a></li>
+    </ul>
+    
+    {% block content %}
+
+    {% endblock %}
+    
+</body>
+</html>

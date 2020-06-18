@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Remove the puppy from the database</h2>
+
+<form method="POST">
+
+    {{ form.hidden_tag() }}
+    {{ form.id.label }} {{ form.id() }}
+    {{ form.submit() }}
+
+</form>
+
+{% endblock %}
