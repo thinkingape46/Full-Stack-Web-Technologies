@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from forms import AddForm, DelForm
+from forms import AddForm, DelForm, AddOwnerForm
 
 # create a flask app
 app = Flask(__name__)
@@ -35,12 +35,31 @@ class Puppy(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
+    owner = db.relationship('Owner', backref='puppy', uselist=False)
 
     def __init__(self, name):
-        self.name = name
+        self.name = name    
 
     def __repr__(self):
-        return "Puppy name is {a}".format(a=self.name)
+        if self.owner:
+            return "Puppy name is {a} and owner is {b}.".format(a=self.name, b=self.owner.owner_name)
+        else:
+            return "Puppy name is {a} and currenly has no owner".format(a=self.name)
+
+class Owner(db.Model):
+
+    __tablename__ = 'owner'
+
+    id = db.Column(db.Integer, primary_key=True)
+    owner_name = db.Column(db.Text)
+
+    # Connect the owner to the puppy model.
+    puppy_id = db.Column(db.Integer, db.ForeignKey('puppies.id'))
+
+    def __init__(self, owner_name, puppy_id):
+        self.owner_name = owner_name
+        self.puppy_id = puppy_id
+
 
 # View functions.
 
@@ -81,14 +100,31 @@ def del_puppy():
 
     return render_template('delete.html', form=form)
 
+@app.route('/add_owner', methods=['GET', 'POST'])
+def add_owner():
+
+    # instantiate AddOwnerForm class.
+    form = AddOwnerForm()
+
+    if form.validate_on_submit():
+        id = form.pup_id.data
+        # puppy = Puppy.query.get(id)
+        name = form.name.data
+        new_owner = Owner(name, id)
+        db.session.add(new_owner)
+        db.session.commit()
+
+        return redirect(url_for('list_puppy'))
+    
+    return render_template('add_owner.html', form=form)
+
+
 @app.route('/list_puppies')
 def list_puppy():
 
     puppies = Puppy.query.all()
 
     return render_template('list.html', puppies=puppies)
-
-
 
 
 if __name__ == '__main__':
