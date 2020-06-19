@@ -42,7 +42,7 @@ class Puppy(db.Model):
 
     def __repr__(self):
         if self.owner:
-            return "Puppy name is {a} and owner is {b}.".format(a=self.name, b=self.owner.owner_name)
+            return "Puppy name is {a} (id:{c}) and owner is {b}.".format(a=self.name, b=self.owner.owner_name, c=self.id)
         else:
             return "Puppy name is {a} and currenly has no owner".format(a=self.name)
 
