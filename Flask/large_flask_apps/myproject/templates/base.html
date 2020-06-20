@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Adoption Site</title>
+    <style>
+        li {float: left;
+        width: 100px;
+        text-align: center;
+        list-style: none;}
+        li a {            
+        text-decoration: none;
+        }
+    </style>
+</head>
+<body style="margin:auto;  width: 1000px;">
+    <header>
+        <nav style="float: left;">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home Page</a></li>
+                <li><a href="{{ url_for('add') }}">Add Puppy</a></li>
+                <li><a href="{{ url_for('remove') }}">Remove Puppy</a></li>
+                <li><a href="{{ url_for('add_owner') }}">Add Owner</a></li>
+                <li><a href="{{ url_for('puppy_list') }}">Puppy List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+    
+</body>
+</html>
