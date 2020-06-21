@@ -1,13 +1,11 @@
-{% entends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 
 <h2>Here are list of puppies</h2>
-
 <ul>
-    {% for pup in puppies: %}
-    <li>{{pup}}</li>
-    {% end for %}
+{% for pup in puppies %}
+<li>{{pup}}</li>
+{% endfor %}
 </ul>
-
-{% end block %}
+{% endblock %}

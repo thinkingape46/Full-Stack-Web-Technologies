@@ -8,9 +8,9 @@ from wtforms import IntegerField, StringField, SubmitField
 class AddForm(FlaskForm):
 
     name = StringField('Name of the puppy: ')
-    submit = SubmitField('Submit')
+    submit = SubmitField('Add Puppy')
 
 class DelForm(FlaskForm):
 
     id = IntegerField('Enter the id of the puppy:')
-    submit = SubmitField('Submit')
+    submit = SubmitField('Remove Puppy')

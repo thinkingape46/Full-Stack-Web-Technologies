@@ -21,7 +21,7 @@ Migrate(app, db)
 # we need to register the blueprints after we define the db.
 
 from myproject.puppies.views import puppies_blueprint
-from myproject.owners.views import owners_blueprints
+from myproject.owners.views import owners_blueprint
 
-app.register_blueprint(owners_blueprints, url_prefix="/owners")
+app.register_blueprint(owners_blueprint, url_prefix="/owners")
 app.register_blueprint(puppies_blueprint, url_prefix="/puppies")

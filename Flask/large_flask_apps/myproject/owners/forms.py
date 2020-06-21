@@ -7,5 +7,5 @@ from wtforms import IntegerField, StringField, SubmitField
 class AddForm(FlaskForm):
 
     name = StringField('Name of the owner:')
-    id = IntegerField('id of the puppy:')
-    submit = SubmitField('Submit')
+    pup_id = IntegerField('id of the puppy:')
+    submit = SubmitField('Add Owner')

@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puppy Adoption Site</title>
     <style>
-        li {float: left;
+        body {
+            width: 1000px;
+        }
+        nav {
+            padding-top: 20px;
+        }
+        nav li {
         width: 100px;
         text-align: center;
         list-style: none;}
@@ -14,15 +20,15 @@
         }
     </style>
 </head>
-<body style="margin:auto;  width: 1000px;">
+<body>
     <header>
-        <nav style="float: left;">
+        <nav>
             <ul>
                 <li><a href="{{ url_for('index') }}">Home Page</a></li>
-                <li><a href="{{ url_for('add') }}">Add Puppy</a></li>
-                <li><a href="{{ url_for('remove') }}">Remove Puppy</a></li>
-                <li><a href="{{ url_for('add_owner') }}">Add Owner</a></li>
-                <li><a href="{{ url_for('puppy_list') }}">Puppy List</a></li>
+                <li><a href="{{ url_for('puppies.add') }}">Add Puppy</a></li>
+                <li><a href="{{ url_for('puppies.delete') }}">Remove Puppy</a></li>
+                <li><a href="{{ url_for('owners.add') }}">Add Owner</a></li>
+                <li><a href="{{ url_for('puppies.list') }}">Puppy List</a></li>
             </ul>
         </nav>
     </header>

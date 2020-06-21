@@ -4,10 +4,10 @@ from myproject import db
 from myproject.models import Owner
 from myproject.owners.forms import AddForm
 
-owners_blueprints = Blueprint('owners', __name__, template_folder='templates/owners')
+owners_blueprint = Blueprint('owners', __name__, template_folder='templates/owners')
 
 # Remember we passed 'owners' inside 'owners_blueprints'
-@owners_blueprints.route('/add', methods=['GET', 'POST'])
+@owners_blueprint.route('/add', methods=['GET', 'POST'])
 def add():
     
     form = AddForm()
@@ -15,7 +15,7 @@ def add():
     if form.validate_on_submit():
 
         name = form.name.data
-        pup_id = form.id.data
+        pup_id = form.pup_id.data
 
         new_owner = Owner(name, pup_id)
         db.session.add(new_owner)
@@ -23,4 +23,4 @@ def add():
 
         return redirect(url_for('puppies.list'))
 
-    return render_template('add.html', form=form)
+    return render_template('add_owner.html', form=form)
