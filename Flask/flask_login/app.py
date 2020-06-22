@@ -14,7 +14,7 @@ def home():
 # It makes sure that for the user to see the welcome view, they have to login first.
 @login_required
 def welcome_user():
-    return render_template('wecome_user.html')
+    return render_template('welcome_user.html')
 
 
 @app.route('/logout')
@@ -43,7 +43,7 @@ def login():
             next = request.args.get('next')
 
             if next == None or not next[0] == '/':
-                next = url_for('welcome_user.html')
+                next = url_for('welcome_user')
 
             return redirect(next)
 
@@ -70,4 +70,7 @@ def register():
 
     return render_template('register.html', form=form)
 
+
+if __name__=='__main__':
+    app.run(debug=True)
 

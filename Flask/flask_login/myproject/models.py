@@ -19,7 +19,7 @@ class User(db.Model, UserMixin):
     # We use 64 to limit the number of characters in email.
     # Unique = True, because we don't want two users with same email address.
     email = db.Column(db.String(64), unique=True, index=True)
-    username = db.Column(db.String(64, unique=True, index=True))
+    username = db.Column(db.String(64), unique=True, index=True)
     password_hash = db.Column(db.String(128))
 
     def __init__(self, email, username, password):
