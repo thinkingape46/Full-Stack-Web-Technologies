@@ -73,6 +73,11 @@ def account():
     return render_template('acccount.html', profile_image=profile_image, form=form)
 
 
+@users.route("/<username>")
+def user_posts():
+        
+
+
 @users.route('/logout')
 def logout():
     logout_user()

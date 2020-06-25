@@ -57,4 +57,4 @@ class BlogPost(db.Model):
     def __repr__(self):
         return "Post Id: {a}, Date: {b}".format(a=self.id, b=self.date)
 
-        
+
