@@ -9,9 +9,14 @@
     <ul>
         <li><a href="{{ url_for('core.index') }}">Home</a></li>
         <li><a href="{{ url_for('core.info') }}">About</a></li>
-        <li><a href="#">Log Out</a></li>
-        <li><a href="#">Account</a></li>
+        {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('users.logout') }}">Log Out</a></li>
+        <li><a href="{{ url_for('users.account')}}">Account</a></li>
         <li><a href="#">Create Post</a></li>
+        {% else %}
+        <li><a href="{{ url_for('users.login') }}">Log In</a></li>
+        <li><a href="{{ url_for('users.register') }}">Register</a></li>
+        {% endif %}
     </ul>
 
     {% block content %}
