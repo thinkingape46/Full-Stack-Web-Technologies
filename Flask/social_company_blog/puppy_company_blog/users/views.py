@@ -10,7 +10,7 @@ users = Blueprint('users', __name__)
 
 @users.route('/register', methods=['GET', 'POST'])
 def register():
-    form = LoginForm()
+    form = RegistrationForm()
 
     if form.validate_on_submit():
         user = User(email=form.email.data,

@@ -4,7 +4,7 @@
 
 <form method="POST">
     {{ form.hidden_tag() }}
-    {{ form.email.label }} {{ form.label() }}
+    {{ form.email.label }} {{ form.email() }}
     {{ form.password.label }} {{ form.password() }}
     {{ form.submit() }}
 </form>
