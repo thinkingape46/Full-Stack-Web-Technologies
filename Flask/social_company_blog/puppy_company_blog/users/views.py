@@ -16,12 +16,13 @@ def register():
         user = User(email=form.email.data,
                     username=form.username.data,
                     password=form.password.data)
+
         db.session.add(user)
         db.session.commit()
         
         flash("Thanks for Registration!")
 
-        return render_template(url_for('user.login'))
+        return redirect(url_for('users.login'))
 
     return render_template('register.html', form=form)
 
@@ -30,8 +31,8 @@ def login():
     form = LoginForm()
 
     if form.validate_on_submit():
-        user = User.query.filter_by(email=form.email.data)
-        if User.check_password(form.password.data) and user is not None:
+        user = User.query.filter_by(email=form.email.data).first()
+        if user.check_password(form.password.data) and user is not None:
             login_user(user)
             flash('Login Success')
 
@@ -45,7 +46,7 @@ def login():
 
 
 # Accound update form
-@users.route('/account', methods=['GET', 'POST'])
+@users.route("/account", methods=['GET', 'POST'])
 @login_required
 def account():
     form = UpdateUserForm()
@@ -70,7 +71,7 @@ def account():
         form.email.data = current_user.email
 
     profile_image = url_for('static', filename='profile_pics/'+current_user.profile_image)
-    return render_template('acccount.html', profile_image=profile_image, form=form)
+    return render_template('account.html', profile_image=profile_image, form=form)
 
 
 @users.route("/<username>")

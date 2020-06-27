@@ -22,7 +22,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(64), unique=True, index=True)
     # passwords are hashed to 128 bit string.
     password_hash = db.Column(db.String(128))
-    posts = db.relationship('BlogSpot', backref='author', lazy=True)
+    posts = db.relationship('BlogPost', backref='author', lazy=True)
 
     def __init__(self, email, username, password):
         self.email = email
