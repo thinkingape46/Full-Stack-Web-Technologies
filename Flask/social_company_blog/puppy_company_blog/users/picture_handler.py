@@ -6,12 +6,12 @@ def add_profile_pic(pic_upload, username):
 
     filename = pic_upload.filename
     # get the extension type.
-    ext_type = filename.split['.'][-1]
+    ext_type = filename.split('.')[-1]
 
     # You can also hash it.
     storage_filename = str(username) + "." + ext_type
 
-    filepath = os.path.join(current_app.root_path, 'static/profile_pics', storage_filename)
+    filepath = os.path.join(current_app.root_path, 'static\profile_pics', storage_filename)
 
     output_size = (200, 200)
 

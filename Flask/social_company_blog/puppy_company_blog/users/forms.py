@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField, ValidationError
+from wtforms import StringField, SubmitField, PasswordField
 from wtforms.validators import DataRequired, Email, EqualTo
+from wtforms import ValidationError
 # This import will allow users to update their profile picture. 
 from flask_wtf.file import FileField, FileAllowed
 

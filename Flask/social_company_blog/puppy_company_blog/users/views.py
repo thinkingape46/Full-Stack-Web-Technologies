@@ -51,7 +51,7 @@ def login():
 def account():
     form = UpdateUserForm()
 
-    if form.validate_on_submit:
+    if form.validate_on_submit():
 
         # Picture upload.
         if form.picture.data:
