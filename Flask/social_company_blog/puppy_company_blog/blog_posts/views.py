@@ -67,7 +67,7 @@ def update(blog_post_id):
 
 # delete blog post.
 
-@blog_posts.route('/<int:blog_post_id>/delete', methods=['GET', 'POST'])
+@blog_posts.route('/<int:blog_post_id>/delete', methods=['POST', 'GET'])
 @login_required
 def delete_post(blog_post_id):
 
@@ -79,4 +79,4 @@ def delete_post(blog_post_id):
     db.session.commit()
     flash('Blog post deleted')
 
-    return render_template(url_for('core.index'))
+    return redirect(url_for('core.index'))
