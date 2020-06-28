@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Create a blog post using the form below.</h2>
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.title.label }} {{ form.title }}
+    {{ form.text.label }} {{ form.text }}
+    {{ form.submit() }}
+</form>
+
+{% endblock %}
