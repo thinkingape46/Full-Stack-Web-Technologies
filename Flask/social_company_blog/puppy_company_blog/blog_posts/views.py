@@ -29,7 +29,7 @@ def create_post():
 # Login not required.
 # We use an id to the views so that url stays unique.
 # we use int: in <int: blog_post_id> to cast it as an integer.
-@blog_posts.route('/<int: blog_post_id>')
+@blog_posts.route('/<int:blog_post_id>')
 def blog_post(blog_post_id):
     blog_post = BlogPost.query.get_or_404(blog_post_id)
 
@@ -37,7 +37,7 @@ def blog_post(blog_post_id):
 
 # Update to blog post
 
-@blog_posts.route('/<int: blog_post_id/update', methods=['GET', 'POST'])
+@blog_posts.route('/<int:blog_post_id>/update', methods=['GET', 'POST'])
 @login_required
 def update(blog_post_id):
 
@@ -55,7 +55,7 @@ def update(blog_post_id):
         # We don't need to add, because we just changed the post.
         db.session.commit()
         flash('Blog post updated')
-        return redirect(url_for('blog_posts/blog_post', blog_post_id=blog_post_id))
+        return redirect(url_for('blog_posts.blog_post', blog_post_id=blog_post.id))
 
     # When the user opens the blog post page to edit, the title and text should be filed with existing details and not empty.
 
@@ -67,7 +67,7 @@ def update(blog_post_id):
 
 # delete blog post.
 
-@blog_posts.route('/<int: blog_post_id/delete', methods=['GET', 'POST'])
+@blog_posts.route('/<int:blog_post_id>/delete', methods=['GET', 'POST'])
 @login_required
 def delete_post(blog_post_id):
 
