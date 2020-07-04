@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
 
     <nav>
         <ul>
             <li><a href="{{ url_for('index')}}">Home</a></li>
-            <li><a href="#">To Do List</a></li>
+            <li><a href="{{ url_for('bmi_page')}}">BMI</a></li>
             <li><a href="{{ url_for('info')}}">Info</a></li>
         </ul>
     </nav>
 
-    <h2>Welcome to Web App rendered using Flask</h2>
+    <h2>Rendered using Flask</h2>
 
     {% block content %}
 
     {% endblock %}
 
+        
 </body>
 </html>

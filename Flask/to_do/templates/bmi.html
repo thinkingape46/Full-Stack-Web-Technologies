@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}BMI Calculator{% endblock %}
+
+{% block content %}
+
+<h3>BMI Calculator</h3>
+
+<form method="POST">
+
+    {{ form.hidden_tag() }}
+    <p>{{ form.weight.label }} {{ form.weight(placeholder="Enter weight in Kg", autocomplete="off", id="weightId") }} Kg</p>
+    <p>{{ form.height.label }} {{ form.height(placeholder="Enter height in Cm", autocomplete="off", id="heightId") }} Cm</p>
+    <br>
+    {{ form.submit(id="submitId") }} <button id="clearId">Clear</button>
+
+</form>
+
+<div>
+    {% if bmi %}
+    <p id="bmiResult">{{ bmi }}</p>
+    {% endif %}
+</div>
+
+
+<script type=text/javascript src="{{ url_for('static', filename='app.js') }}"></script>
+
+{% endblock %}
+
