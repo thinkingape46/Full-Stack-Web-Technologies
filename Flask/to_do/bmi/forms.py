@@ -6,4 +6,3 @@ class BmiCalculator(FlaskForm):
 
     weight = IntegerField("Weight: ", validators=[DataRequired()])
     height = IntegerField("Height: ", validators=[DataRequired()])
-    submit = SubmitField("Calculate BMI")

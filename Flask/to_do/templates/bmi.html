@@ -12,18 +12,46 @@
     <p>{{ form.weight.label }} {{ form.weight(placeholder="Enter weight in Kg", autocomplete="off", id="weightId") }} Kg</p>
     <p>{{ form.height.label }} {{ form.height(placeholder="Enter height in Cm", autocomplete="off", id="heightId") }} Cm</p>
     <br>
-    {{ form.submit(id="submitId") }} <button id="clearId">Clear</button>
+    <p id="submitId">Calculate BMI</p>
+    <button id="clearId">Clear</button>
 
 </form>
 
 <div>
-    {% if bmi %}
-    <p id="bmiResult">{{ bmi }}</p>
-    {% endif %}
+    <p id="bmiResult">BMI result here</p>
 </div>
 
+<!-- <div>
+    {% if bmi %}
+    <p id="bmiResult">{{ bmi }}>BMI result here</p>
+    {% endif %}
+</div> -->
 
-<script type=text/javascript src="{{ url_for('static', filename='app.js') }}"></script>
+
+<!-- <script type=text/javascript src="{{ url_for('static', filename='app.js') }}"></script> -->
+
+{% endblock %}
+
+{% block script %}
+<script type=text/javascript>
+    let submit = document.getElementById("submitId");
+    let weight = document.getElementById("weightId");
+    let height = document.getElementById("heightId");
+    let bmiResult = document.getElementById("bmiResult")
+    
+    $(function() {
+        $("#submitId").bind("click", function() {
+            $.getJSON($SCRIPT_ROOT + "/bmi",
+            {
+                w: $("#weightId").val(),
+                h: $("#heightId").val()
+            },
+            function(data) {
+                $("#bmiResult").text(data.result);
+            })
+        });
+    });
+</script>
 
 {% endblock %}
 
