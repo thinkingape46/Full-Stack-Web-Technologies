@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Calculator</h3>
+
+<table>
+    <tr>
+        <th colspan="3"><p id="result">0</p></th>
+    </tr>
+    <tr>
+        <th><button id="seven", value="7">7</button></th>
+        <th><button id="eight", value="8">8</button></th>
+        <th><button id="nine", value="9">9</button></th>
+        <th><button id="add", value="+">+</button></th>
+    </tr>
+    <tr>
+        <th><button>4</button></th>
+        <th><button>5</button></th>
+        <th><button>6</button></th>
+        <th><button>-</button></th>
+    </tr>
+    <tr>
+        <th><button>3</button></th>
+        <th><button>2</button></th>
+        <th><button>1</button></th>
+        <th><button>X</button></th>
+    </tr>
+    <tr>
+        <th><button id="calculate", value="=">=</button></th> 
+    </tr>
+
+</table>
+
+{% endblock %}
+
+{% block script %}
+
+<script>
+    let operations = ""
+    let buttonSeven = document.getElementById("seven")
+    let buttonEight = document.getElementById("eight")
+    let buttonAdd = document.getElementById("add")
+    let buttonCalculate = document.getElementById("calculate")
+
+    buttonSeven.addEventListener("click", function() {        
+        operations += 7
+    })    
+    buttonEight.addEventListener("click", function() {   
+        operations += 8
+    })    
+    buttonAdd.addEventListener("click", function() {        
+        operations += "+"
+    })
+
+    $("#calculate").bind("click", function() {
+        $.getJSON($SCRIPT_ROOT + "/calculator", {
+            a: operations
+        },
+        function(data) {
+            $("#result").text(data.result)
+        });
+        operations = ""
+    })
+
+</script>
+
+{% endblock %}
