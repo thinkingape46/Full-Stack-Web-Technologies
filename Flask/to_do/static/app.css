@@ -1,0 +1,35 @@
+button {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 25px;
+    background-color: #0fd6bf;
+    color: #ffffff;
+    border: none;
+}
+button:hover {
+    background-color: #089988;
+}
+
+#result {
+    background-color: #b6b8b7;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 5px;
+    margin: 0 0 3px 0;
+    display: block;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 50px;
+    border: 2px solid #828282;
+    color: #ffffff;
+}
+
+table {
+    margin: auto;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background: linear-gradient(#000, #fff);
+}
