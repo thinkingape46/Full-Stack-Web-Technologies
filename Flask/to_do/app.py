@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, redirect, jsonify, request
 from bmi.forms import BmiCalculator
 from python_scripts.bmi_calculator import bmi_calculator
+from python_scripts.calculator import processing
 
 app = Flask(__name__)
 
@@ -38,9 +39,11 @@ def calculator_page():
 @app.route("/calculator")
 def calculator():
 
-    a = request.args.get("a", "1", type=str)
-    print("result: {a}".format(a = a))
-    return jsonify(result = list(a))
+    calculator_input = request.args.get("a", "1", type=str)
+    calculator_output = processing(list(calculator_input))
+
+    print("result: {a}".format(a = calculator_output))
+    return jsonify(result = calculator_output)
 
 
 

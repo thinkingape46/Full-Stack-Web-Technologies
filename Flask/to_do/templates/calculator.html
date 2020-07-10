@@ -18,7 +18,7 @@
         <th><button>4</button></th>
         <th><button>5</button></th>
         <th><button>6</button></th>
-        <th><button>-</button></th>
+        <th><button id="sub" value="-">-</button></th>
     </tr>
     <tr>
         <th><button>3</button></th>
@@ -41,16 +41,24 @@
     let buttonSeven = document.getElementById("seven")
     let buttonEight = document.getElementById("eight")
     let buttonAdd = document.getElementById("add")
+    let buttonSub = document.getElementById("sub")
     let buttonCalculate = document.getElementById("calculate")
 
     buttonSeven.addEventListener("click", function() {        
         operations += 7
+        $("#result").text(operations)
     })    
     buttonEight.addEventListener("click", function() {   
         operations += 8
+        $("#result").text(operations)
     })    
     buttonAdd.addEventListener("click", function() {        
         operations += "+"
+        $("#result").text(operations)
+    })
+    buttonSub.addEventListener("click", function() {        
+        operations += "-"
+        $("#result").text(operations)
     })
 
     $("#calculate").bind("click", function() {
